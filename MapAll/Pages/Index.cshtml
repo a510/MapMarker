@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Map</title>
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<script src="~/js/site.js"></script>
+</head>
+<body>
+	<h3>Select your location</h3>
+
+	<div id="map"></div>
+	<div>
+		<label>	Latitude:  <input type="text" id="lat" /></label>
+	</div>
+	<div>
+		<label>	Longitude: <input type="text" id="lng" /></label>
+	</div>
+	<div>
+		<label>	Address:   <input type="text" id="address" /></label>
+	</div>
+
+	<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj2ZX7RhiS2pRM48wibhfDRhA9uPbTIqs&region=SA&language=ar&callback=initMap&libraries=&v=weekly" async></script>
+
+</body>
+</html>
